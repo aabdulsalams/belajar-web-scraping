@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from bs4 import BeautifulSoup
 
-browser = webdriver.Firefox()
+#browser = webdriver.Safari()
+browser = webdriver.Chrome('/Users/abdulsalam/Documents/dll/chromedriver')
 keyword = 'komputer'
 browser.get('https://www.indonetwork.co.id/showcase/'+keyword)
 
