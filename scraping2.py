@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from bs4 import BeautifulSoup
 
 #browser = webdriver.Safari()
 browser = webdriver.Chrome('/Users/abdulsalam/Documents/dll/chromedriver')
@@ -18,7 +17,7 @@ for company in findCompanies:
     company_name = company.find_element_by_tag_name('h3').text.replace('\n',' ')
     company_location = company.find_element_by_id('lokasi').text.replace('•','\\')
     company_address = company.find_element_by_class_name('seller-name').text.replace('\n',' ').replace('Alamat','').replace(':','').replace(' ','',2)
-    company_telephone = company.find_element_by_class_name('absphone').text.replace('\n',' \\ ')
+    company_telephone = company.find_element_by_class_name('nowa').text.replace('\n',' \\ ')
     print(f'''
     Company Name\t: {company_name}
     City \ Province\t: {company_location}
